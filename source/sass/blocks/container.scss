@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (min-width: 320px) and (max-width: 1220px) {
+    padding: 0 20px;
+    margin: 0;
+  }
+}

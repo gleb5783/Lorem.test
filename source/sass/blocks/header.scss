@@ -1,189 +1,85 @@
 .header {
-  position: absolute;
-  width: 100%;
+  position: fixed;
   top: 0;
-  background-color: transparent;
-  z-index: 10;
+  background-color: rgba($background-header, 0.9);
+  width: 100%;
 }
 
-.header__link-logo--nojs {
-  position: absolute;
-  top: 250px;
+.header__nav {
+  min-width: 320px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 320px) and (max-width: 1220px) {
+    padding: 0 20px;
+    margin: 0;
+  }
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  min-height: 100px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header__logo {
-  margin: 25px 0 0 16px;
-
-  @media (min-width: 768px) {
-    margin: 25px 0 0 22px;
-  }
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.header__button--nojs {
-  display: none;
-}
-
-.header__menu-open-button {
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: $background-btn;
-  background-image: url("../img/burger.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-
-  &:hover {
-    background-color: $hover;
-  }
-
-  &:active {
-    background-color: $background-btn;
-  }
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.header__menu-close-button {
-  background-image: url("../img/close.svg");
-  background-color: transparent;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-
-  &:hover {
-    background-color: $hover;
-  }
-
-  &:active {
-    background-color: $background-btn;
-  }
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.header__list-drop-menu {
-  display: none;
-  flex-direction: column;
-  flex-basis: 100%;
-  overflow-y: scroll;
-  margin: 0;
-  list-style: none;
-  background-color: $white;
-  height: 100vh;
-  padding: 100px 0 50px 0;
-
-  @media (min-width: 1024px) {
-    overflow-y: visible;
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    background-color: transparent;
-    flex-direction: row;
-    border-bottom: 1px solid rgba($white, 0.2%);
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -436px;
-    max-width: 874px;
-    width: 100%;
-    z-index: 1;
-    gap: 0 107px;
-    justify-content: flex-start;
-  }
-}
-
-.header__list-drop-menu--open {
   display: flex;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
 }
 
-.header__list-drop-menu--nojs {
-  @media (max-width: 1023px) {
-    padding: 1px 0 0 0;
-    min-height: 245px;
-
-    & li {
-      margin-bottom: 1px;
-    }
-  }
+.header__logo span {
+  color: $color-logo;
 }
 
-.header__list-drop-menu-item {
+.header__nav-link {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-  min-height: 60px;
-  background-color: $grey;
+  flex-wrap: wrap;
+  max-width: 840px;
+  width: 100%;
+}
 
-  @media (min-width: 1024px) {
-    background-color: transparent;
-    margin: 0;
-    min-height: auto;
-    padding: 0 16px;
+.header__nav-link-item {
+  padding: 10px 0;
+  &:not(:last-child) {
+    margin-right: 60px;
   }
 }
 
-.header__list-drop-menu-item a {
-  position: relative;
+.header__link {
   text-decoration: none;
-  color: $link;
-  display: block;
-  font-size: 20px;
-  line-height: 140%;
-  width: 100%;
-  padding: 16px;
-
-  &::after {
-    content: "";
-    width: 25px;
-    height: 25px;
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  text-transform: uppercase;
+  color: $white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
 
   &:hover {
-    color: $hover;
+    color: $color-logo;
   }
 
   &:active {
-    color: $background-btn;
+    color: $color-active;
   }
+}
 
-  @media (min-width: 1024px) {
-    padding: 18px 0 9px;
-    color: rgba($white, 0.7%);
-    font-size: 16px;
-    line-height: 32px;
-
-    &::after {
-      display: none;
-    }
-  }
+.header__link--active {
+  color: $color-logo;
 }

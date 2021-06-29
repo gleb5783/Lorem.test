@@ -1,102 +1,184 @@
 .footer {
-  min-height: 151px;
+  background-color: $background-footer;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .footer__list {
+  margin: 0;
   padding: 0;
-  margin: 29px 0 0 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 22px 0 0 0;
-  }
-
-  @media (min-width: 1024px) {
-    margin: 39px auto 0;
-    max-width: 547px;
-    justify-content: space-between;
-  }
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer__list-item {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0 20px 24px;
-}
-
-.footer__link {
+  min-height: 80px;
   position: relative;
-  display: block;
-  font-size: 16px;
-  line-height: 22px;
-  text-decoration: none;
-  color: rgba($black, 0.5%);
+  padding: 0 40px 0 0;
 
-  &:hover {
-    color: $hover;
-  }
-
-  &:active {
-    color: $background-btn;
+  &:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    height: 18px;
+    display: block;
+    background-image: url('../img/icon-line.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 32px;
   }
 }
 
-.footer__link--email {
-  padding: 0 0 0 48px;
+.footer__copyright-list-item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: $white;
+}
+
+.footer__item-pay {
+  &:not(:last-child) {
+    margin-right: 38px;
+  }
+}
+
+.footer__qiwi {
+  color: $footer-pay;
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 30px;
 
   &::before {
-    content: "";
-    width: 26px;
+    content: '';
+    width: 20px;
     height: 20px;
     display: block;
     position: absolute;
-    top: 1px;
-    left: 7px;
-    background-image: url("../img/mail.svg");
+    left: 0;
+    top: 0;
+    background-image: url('../img/qiwi.svg');
     background-repeat: no-repeat;
-
-    @media (min-width: 768px) {
-      left: -5px;
-    }
-
-    @media (min-width: 1024px) {
-      left: -9px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    padding: 0 0 0 36px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 0 0 0 33px;
+    background-position: center;
   }
 }
 
-.footer__link--phone {
-  padding: 0 0 0 23px;
+.footer__yandex {
+  color: $footer-pay;
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 30px;
 
   &::before {
-    content: "";
-    width: 22px;
-    height: 24px;
+    content: '';
+    width: 14px;
+    height: 18px;
     display: block;
     position: absolute;
-    top: -4px;
-    left: -13px;
-    background-image: url("../img/phone.svg");
+    left: 0;
+    top: -3px;
+    background-image: url('../img/yandex.svg');
     background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.footer__web-money {
+  color: $footer-pay;
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('../img/web-money.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.footer__contacts-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-right: 38px;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: $white;
+
+  &:hover {
+    color: $color-logo;
   }
 
-  @media (min-width: 1024px) {
-    padding: 0 8px 0 24px;
+  &:active {
+    color: $color-active;
+  }
+}
+
+.footer__link--mail {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url('../img/footer-mail.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: -1px;
+  }
+}
+
+.footer__link--vk {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url('../img/footer-vk.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: -1px;
   }
 }

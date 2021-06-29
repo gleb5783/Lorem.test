@@ -1,0 +1,114 @@
+.main-content {
+  background-image: url('../img/main-background.jpg');
+  background-repeat: no-repeat;
+  min-height: 850px;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-content__main-heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  margin: 203px 0 80px 0;
+}
+
+.main-content__main-heading span {
+  color: $color-logo;
+}
+
+.main-content__heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content__list {
+  margin: 10px 0 70px;
+  padding: 0 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.main-content__list-item {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+
+  &::before {
+    content: '';
+    width: 25px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 2px;
+    background-image: url('../img/list-line.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.main-content__btn-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content__btn-list-item {
+  padding: 10px 0;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.main-content__btn {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  display: flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  width: 183px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $color-logo;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $color-active;
+    color: $white;
+  }
+}
+
+.main-content__btn-order {
+  color: $white;
+  background-color: $background-btn;
+  border: 1px solid $white;
+}
+
+.main-content__btn-more-inf {
+  color: $color-btn;
+  background-color: $white;
+  border: 1px solid $border-btn;
+}
