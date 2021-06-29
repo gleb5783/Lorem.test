@@ -13,6 +13,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1150px) {
+    justify-content: center;
+  }
+}
+
+.footer__list--mob {
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .footer__list-item {
@@ -33,6 +43,24 @@
     position: absolute;
     right: 0;
     top: 32px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1150px) {
+    margin-right: 35px;
+
+    &:last-child {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -48,6 +76,10 @@
 .footer__item-pay {
   &:not(:last-child) {
     margin-right: 38px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 20px;
   }
 }
 

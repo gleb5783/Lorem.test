@@ -107,12 +107,12 @@
               </select>
             </div>
             <div class="main-form-order__input">
-              <input type="email" placeholder="Ваш e-mail" id="mail">
-              <label for=""></label>
+              <input type="email" name="mail" placeholder="Ваш e-mail" id="mail">
+              <label class="visually-hidden" for="mail">Введите ваш email</label>
             </div>
             <div class="main-form-order__input">
-              <input type="text" placeholder="Ваше имя" id="name">
-              <label for=""></label>
+              <input type="text" placeholder="Ваше имя" id="name" name="user-name">
+              <label class="visually-hidden" for="name"></label>
             </div>
           </fieldset>
           <fieldset class="main-form-order__fieldset">
@@ -125,7 +125,7 @@
               </div>
             </div>
             <div class="main-form-order__input-file">
-              <input class="visually-hidden" type="file" id="file" name="">
+              <input class="visually-hidden" type="file" id="file" name="file">
               <label for="file">Прикрепить файл</label>
             </div>
           </fieldset>
@@ -136,7 +136,7 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <ul class="footer__list">
+      <ul class="footer__list footer__list--mob">
         <li class="footer__list-item">
           <ul class="footer__list">
             <li class="footer__copyright-list-item">
@@ -166,5 +166,6 @@
       </ul>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

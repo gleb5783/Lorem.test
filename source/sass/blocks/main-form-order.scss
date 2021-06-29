@@ -39,6 +39,10 @@
   margin: 0 0 80px 0;
   padding: 0 16px;
   list-style: none;
+
+  @media (max-width: 740px) {
+    flex-direction: column;
+  }
 }
 
 .main-form-order__list-item {
@@ -48,6 +52,10 @@
 
   &:not(:last-child) {
     margin-right: 30px;
+
+    @media (max-width: 740px) {
+      margin: 0;
+    }
   }
 
   &:not(:last-child)::after {
@@ -61,6 +69,19 @@
     position: absolute;
     right: -69px;
     top: 46px;
+
+    @media (max-width: 740px) {
+      transform: rotate(90deg);
+      right: 77px;
+      top: 178px;
+      width: 60px;
+    }
+  }
+
+  @media (max-width: 740px) {
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
   }
 }
 
@@ -100,6 +121,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1220px) {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .main-form-order__select {
@@ -142,6 +168,10 @@
 
   &:not(:last-child) {
     margin: 0 30px 0 0;
+
+    @media (max-width: 1220px) {
+      margin: 0;
+    }
   }
 }
 
@@ -170,6 +200,14 @@
   width: 100%;
   padding-bottom: 52px;
   max-width: 777px;
+
+  @media (max-width: 1220px) {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 370px;
+  }
 }
 
 .main-form-order__range-text {
@@ -178,6 +216,10 @@
   color: $white;
   margin: 0 0 5px 0;
   padding: 0;
+
+  @media (max-width: 560px) {
+    font-size: 14px;
+  }
 }
 
 .main-form-order__range-value {
@@ -257,6 +299,10 @@
   &:active {
     background-color: $color-active;
     color: $white;
+  }
+
+  @media (max-width: 420px) {
+    padding: 12px 72px 12px 124px;
   }
 }
 

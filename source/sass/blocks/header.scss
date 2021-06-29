@@ -3,6 +3,7 @@
   top: 0;
   background-color: rgba($background-header, 0.9);
   width: 100%;
+  z-index: 10;
 }
 
 .header__nav {
@@ -26,6 +27,19 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 740px) {
+    flex-direction: column;
+  }
+}
+
+.header__list-item {
+  @media (max-width: 740px) {
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+  }
 }
 
 .header__logo {
@@ -53,12 +67,20 @@
   flex-wrap: wrap;
   max-width: 840px;
   width: 100%;
+
+  @media (max-width: 740px) {
+    justify-content: space-between;
+  }
 }
 
 .header__nav-link-item {
   padding: 10px 0;
   &:not(:last-child) {
     margin-right: 60px;
+
+    @media (max-width: 740px) {
+      margin: 0;
+    }
   }
 }
 
