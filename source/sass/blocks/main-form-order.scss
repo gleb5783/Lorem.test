@@ -199,7 +199,9 @@
 	display: none;
 	left: 0;
   height: 220px;
-  width: 370px;
+  min-width: 270px;
+  max-width: 370px;
+  width: 100%;
 	position: absolute;
 	right: 0;
   z-index: 1;
