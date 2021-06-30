@@ -27,6 +27,7 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(server.stream());
 });
 
@@ -52,7 +53,8 @@ gulp.task("refresh", function (done) {
 gulp.task('scripts', function() {
   return gulp.src('./source/js/*.js')
     .pipe(minify())
-    .pipe(gulp.dest('build/js/'));
+    .pipe(gulp.dest('build/js/'))
+    .pipe(gulp.dest('docs/js/'));
 });
 
 gulp.task("images", function() {
@@ -70,7 +72,8 @@ gulp.task("html", function () {
       include()
     ]))
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"));
 });
 
 gulp.task("copy", function () {
@@ -81,7 +84,8 @@ gulp.task("copy", function () {
     ], {
       base: "source"
     })
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build"))
+  .pipe(gulp.dest("docs"));
 });
 
 gulp.task("clean", function () {
