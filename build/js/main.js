@@ -27,3 +27,12 @@ let select = function () {
 
 
 select();
+
+let slider = document.querySelector('#range');
+let sliderValue = document.querySelector('#value');
+
+sliderValue.innerText = slider.value + " %";
+
+slider.oninput = function() {
+  sliderValue.innerText = this.value + " %";
+}

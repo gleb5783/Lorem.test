@@ -39,6 +39,7 @@
   margin: 0 0 80px 0;
   padding: 0 16px;
   list-style: none;
+  justify-content: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -284,10 +285,27 @@
 
   @media (max-width: 1220px) {
     margin: 0;
+    max-width: 370px;
   }
+}
 
-  @media (max-width: 768px) {
-    max-width: 280px;
+.main-form-order__range-wrapper input {
+  appearance: none;
+  width: 100%;
+  border-radius: 20px;
+  height: 6px;
+  background-color: rgba($white, 0.7);
+  border: 1px solid $white;
+  outline: none;
+  margin-top: 15px;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    background-color: $color-logo;
+    border: 3px solid $border-circle;
   }
 }
 
@@ -298,9 +316,12 @@
   margin: 0 0 5px 0;
   padding: 0;
 
+  @media (max-width: 1220px) {
+    max-width: 200px;
+  }
+
   @media (max-width: 768px) {
     font-size: 14px;
-    max-width: 200px;
   }
 }
 
@@ -309,30 +330,6 @@
   font-size: 18px;
   line-height: 22px;
   color: $white;
-}
-
-.main-form-order__range {
-  margin: 16px 0;
-  position: relative;
-  min-width: 270px;
-  width: 100%;
-  max-width: 777px;
-  height: 6px;
-  background-color: rgba($white, 0.7);
-  border: 1px solid $white;
-  border-radius: 20px;
-}
-
-.main-form-order__range-circle {
-  cursor: pointer;
-  position: absolute;
-  top: -9px;
-  background-color: $color-logo;
-  left: 75%;
-  width: 23px;
-  height: 23px;
-  border-radius: 100%;
-  border: 3px solid $border-circle;
 }
 
 .main-form-order__input-file {
