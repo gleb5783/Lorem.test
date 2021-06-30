@@ -40,8 +40,9 @@
   padding: 0 16px;
   list-style: none;
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     flex-direction: column;
+    padding: 0;
   }
 }
 
@@ -53,7 +54,7 @@
   &:not(:last-child) {
     margin-right: 30px;
 
-    @media (max-width: 740px) {
+    @media (max-width: 768px) {
       margin: 0;
     }
   }
@@ -70,7 +71,7 @@
     right: -69px;
     top: 46px;
 
-    @media (max-width: 740px) {
+    @media (max-width: 768px) {
       transform: rotate(90deg);
       right: 77px;
       top: 178px;
@@ -78,7 +79,7 @@
     }
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 768px) {
     &:not(:first-child) {
       margin-top: 60px;
     }
@@ -131,6 +132,10 @@
 .main-form-order__select {
 	position: relative;
 	width: 370px;
+
+  @media (max-width: 768px) {
+    width: 280px;
+  }
 }
 
 .main-form-order__select.is-active .main-form-order__select-body {
@@ -231,7 +236,7 @@
 .main-form-order__input {
   padding-bottom: 30px;
   position: relative;
-  min-width: 320px;
+  min-width: 270px;
   width: 100%;
   max-width: 370px;
 
@@ -241,6 +246,10 @@
     @media (max-width: 1220px) {
       margin: 0;
     }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 280px;
   }
 }
 
@@ -266,7 +275,7 @@
   margin-right: 23px;
   flex-wrap: wrap;
   justify-content: space-between;
-  min-width: 320px;
+  min-width: 270px;
   width: 100%;
   padding-bottom: 52px;
   max-width: 777px;
@@ -276,7 +285,7 @@
   }
 
   @media (max-width: 768px) {
-    max-width: 370px;
+    max-width: 280px;
   }
 }
 
@@ -289,6 +298,7 @@
 
   @media (max-width: 560px) {
     font-size: 14px;
+    max-width: 200px;
   }
 }
 
@@ -302,7 +312,7 @@
 .main-form-order__range {
   margin: 16px 0;
   position: relative;
-  min-width: 320px;
+  min-width: 270px;
   width: 100%;
   max-width: 777px;
   height: 6px;
@@ -328,6 +338,11 @@
   width: 100%;
   max-width: 370px;
   position: relative;
+
+  @media (max-width: 768px) {
+    min-width: 270px;
+    max-width: 280px;
+  }
 }
 
 .main-form-order__input-file label {
@@ -360,7 +375,7 @@
     top: 14px;
     left: 96px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 768px) {
       left: 56px;
     }
   }
@@ -375,9 +390,10 @@
     color: $white;
   }
 
-  @media (max-width: 420px) {
-    padding: 0 0 0 17px;
+  @media (max-width: 768px) {
+    padding: 0 0 0 27px;
     justify-content: center;
+    width: 280px;
   }
 }
 
@@ -409,5 +425,9 @@
   &:active {
     background-color: $color-active;
     color: $white;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 280px;
   }
 }

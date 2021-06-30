@@ -164,6 +164,11 @@
 
   &:not(:last-child) {
     margin-right: 38px;
+
+    @media (max-width: 768px) {
+      margin: 0;
+      padding: 0 0 20px;
+    }
   }
 }
 
