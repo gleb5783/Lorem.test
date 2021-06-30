@@ -8,6 +8,10 @@
   @media (min-resolution: 2dppx) {
     background-image: url('../img/main-background@2x.jpg');
   }
+
+  @media (max-width: 768px) {
+    min-height: 650px;
+  }
 }
 
 .main-content__main-heading {
@@ -19,8 +23,14 @@
   margin: 203px 0 80px 0;
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    margin: 120px 0 30px 0;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 140px 0 30px 0;
+    max-width: 400px;
+
+    & br {
+      display: none;
+    }
   }
 }
 
@@ -48,6 +58,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
+
+  @media (max-width: 768px) {
+    margin: 10px 0 40px;
+  }
 }
 
 .main-content__list-item {
