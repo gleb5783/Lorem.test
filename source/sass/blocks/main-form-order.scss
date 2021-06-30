@@ -287,6 +287,10 @@
     margin: 0;
     max-width: 370px;
   }
+
+  @media (max-width: 768px) {
+    max-width: 280px;
+  }
 }
 
 .main-form-order__range-wrapper input {
