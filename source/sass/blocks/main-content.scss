@@ -4,6 +4,10 @@
   min-height: 850px;
   background-size: cover;
   background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../img/main-background@2x.jpg');
+  }
 }
 
 .main-content__main-heading {
